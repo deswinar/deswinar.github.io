@@ -5,7 +5,7 @@ export default function Contact() {
         Contact Me
       </h2>
       <p className="text-lg mb-8 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-        I'd love to hear from you. Feel free to reach out via email!
+        I&apos;d love to hear from you. Feel free to reach out via email!
       </p>
       <a
         href="mailto:your-email@example.com"

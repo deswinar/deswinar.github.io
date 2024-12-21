@@ -13,11 +13,11 @@ export default function Hero() {
   return (
     <section className="flex flex-col items-center justify-center text-center py-20">
       <h1 className="text-5xl font-extrabold mb-6" style={{ color: 'var(--foreground)' }}>
-        Welcome to <span className="text-blue-500">Deswin's Digital Space</span>
+        Welcome to <span className="text-blue-500">Deswin&apos;s Digital Space</span>
       </h1>
       <p className="text-xl mb-6 max-w-2xl" style={{ color: 'var(--secondary-foreground)' }}>
-        I'm <span className="font-bold text-blue-500">Deswin</span>, a developer driven by a passion for creating impactful digital experiences.
-        Whether it's crafting innovative applications or solving complex challenges, my goal is to bring ideas to life through code.
+        I&apos;m <span className="font-bold text-blue-500">Deswin</span>, a developer driven by a passion for creating impactful digital experiences.
+        Whether it&apos;s crafting innovative applications or solving complex challenges, my goal is to bring ideas to life through code.
       </p>
 
       <div className="text-lg mb-6 max-w-2xl" style={{ color: 'var(--secondary-foreground)' }}>

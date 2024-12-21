@@ -1,9 +1,9 @@
 export default function CallToAction() {
   return (
     <section className="py-20 bg-blue-500 dark:bg-blue-700 text-white text-center">
-      <h2 className="text-3xl font-bold mb-6">Let's Collaborate</h2>
+      <h2 className="text-3xl font-bold mb-6">Let&apos;s Collaborate</h2>
       <p className="text-lg mb-8 max-w-lg mx-auto">
-        Have an exciting project in mind? I'm always open to new opportunities and collaborations. Let's build something great together!
+        Have an exciting project in mind? I&apos;m always open to new opportunities and collaborations. Let&apos;s build something great together!
       </p>
       <a
         href="mailto:your-email@example.com"
