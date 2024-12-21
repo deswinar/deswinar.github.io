@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mode variables */
+:root {
+  --background: #ffffff; /* White background */
+  --foreground: #111111; /* Black text */
+  --secondary-foreground: #333333; /* Dark gray for secondary text */
+  --link-color: #2563eb; /* Blue link color for light mode */
+}
+
+/* Dark mode variables */
+:root.dark {
+  --background: #111111; /* Dark background */
+  --foreground: #ffffff; /* White text */
+  --secondary-foreground: #dddddd; /* Light gray for secondary text */
+  --link-color: #3b82f6; /* Light blue link color for dark mode */
+}
+
+/* Custom global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  @apply bg-background text-foreground transition-colors duration-300;
+}
+
+a {
+  color: var(--link-color);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--link-color-hover, var(--link-color));
+}
