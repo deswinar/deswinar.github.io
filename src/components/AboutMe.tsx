@@ -10,11 +10,11 @@ export default function AboutMe() {
       </p>
 
       <p className="text-lg mb-6 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
-        When I'm not writing code, you&apos;ll find me experimenting with new ideas, collaborating with creative minds, or exploring how emerging technologies can shape the future. The projects I work on are driven by the goal to create meaningful, user-centric solutions that make an impact.
+        When I&apos;m not writing code, you&apos;ll find me experimenting with new ideas, collaborating with creative minds, or exploring how emerging technologies can shape the future. The projects I work on are driven by the goal to create meaningful, user-centric solutions that make an impact.
       </p>
 
       <p className="text-lg mb-6 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
-        I&apos;m always open to new opportunities and collaborations. Let's connect and create something extraordinary together.
+        I&apos;m always open to new opportunities and collaborations. Let&apos;s connect and create something extraordinary together.
       </p>
     </section>
   );
