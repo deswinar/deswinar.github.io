@@ -8,7 +8,7 @@ export default function SocialLinks() {
       </h2>
       <div className="flex justify-center gap-8">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/deswinar"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
