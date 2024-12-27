@@ -6,56 +6,15 @@ import 'swiper/css/zoom';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from 'next/link';
-
-const projects = [
-  {
-    title: 'Handsign Recognition',
-    description: 'A desktop application showcasing handsign recognition using Python and PyTorch using LSTM model.',
-    images: [
-      '/images/projects/handsign_recognition/handsign-recognition-1.JPG',
-      '/images/projects/handsign_recognition/handsign-recognition-2.JPG',
-      '/images/projects/handsign_recognition/handsign-recognition-3.JPG',
-      '/images/projects/handsign_recognition/handsign-recognition-4.JPG',
-      '/images/projects/handsign_recognition/handsign-recognition-5.JPG',
-    ],
-    technologies: ['Python', 'PyTorch', 'LSTM'],
-    liveDemo: 'https://example.com/project-one',
-    github: 'https://github.com/username/project-one',
-  },
-  {
-    title: 'Kamila School Management',
-    description: 'A mobile application to manage various school activities, such as attendance, scoring and reporting',
-    images: [
-      '/images/projects/kamila_icms/kamila-icms-1.jpg',
-      '/images/projects/kamila_icms/kamila-icms-2.jpg',
-      '/images/projects/kamila_icms/kamila-icms-3.jpg',
-      '/images/projects/kamila_icms/kamila-icms-4.jpg',
-      '/images/projects/kamila_icms/kamila-icms-5.jpg',
-    ],
-    technologies: ['Flutter', 'Firebase'],
-    liveDemo: 'https://example.com/project-two',
-    github: 'https://github.com/username/project-two',
-  },
-  {
-    title: 'Vending Machine Software (Frontend)',
-    description: 'Vending machine application using android and java.',
-    images: [
-      '/images/projects/vending_machine/vending-machine-1.jpg',
-      '/images/projects/vending_machine/vending-machine-2.jpg',
-      '/images/projects/vending_machine/vending-machine-3.jpg',
-    ],
-    technologies: ['Android', 'Java'],
-    liveDemo: 'https://example.com/project-three',
-    github: 'https://github.com/username/project-three',
-  },
-];
+import { projects } from "../app/constants/projects";
 
 export default function FeaturedProjects() {
+  const featuredProjects = projects.slice(0, 5);
   return (
     <section id="projects" className="py-20 bg-gray-100 dark:bg-gray-900 text-center">
       <h2 className="text-3xl font-bold mb-10 text-gray-900 dark:text-white">Featured Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
+        {featuredProjects .map((project, index) => (
           <div
             key={index}
             className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow"

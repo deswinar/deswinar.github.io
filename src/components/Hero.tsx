@@ -16,7 +16,7 @@ export default function Hero() {
         Welcome to <span className="text-blue-500">Deswin&apos;s Digital Space</span>
       </h1>
       <p className="text-xl mb-6 max-w-2xl" style={{ color: 'var(--secondary-foreground)' }}>
-        I&apos;m <span className="font-bold text-blue-500">Deswin</span>, a developer driven by a passion for creating impactful digital experiences.
+        Hi, I&apos;m <span className="font-bold text-blue-500">Deswin</span>, a developer driven by a passion for creating impactful digital experiences.
         Whether it&apos;s crafting innovative applications or solving complex challenges, my goal is to bring ideas to life through code.
       </p>
 

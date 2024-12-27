@@ -7,76 +7,7 @@ import 'swiper/css/zoom';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Link from 'next/link';
-
-const projects = [
-  {
-    title: 'Handsign Recognition',
-    description: 'A desktop application showcasing handsign recognition using Python and PyTorch using an LSTM model.',
-    images: [
-      '/images/projects/handsign_recognition/handsign-recognition-1.JPG',
-      '/images/projects/handsign_recognition/handsign-recognition-2.JPG',
-      '/images/projects/handsign_recognition/handsign-recognition-3.JPG',
-      '/images/projects/handsign_recognition/handsign-recognition-4.JPG',
-      '/images/projects/handsign_recognition/handsign-recognition-5.JPG',
-    ],
-    technologies: ['Python', 'PyTorch', 'LSTM'],
-    liveDemo: 'https://example.com/project-one',
-    github: 'https://github.com/username/project-one',
-  },
-  {
-    title: 'Kamila School Management',
-    description: 'A mobile application to manage various school activities, such as attendance, scoring, and reporting.',
-    images: [
-      '/images/projects/kamila_icms/kamila-icms-1.jpg',
-      '/images/projects/kamila_icms/kamila-icms-2.jpg',
-      '/images/projects/kamila_icms/kamila-icms-3.jpg',
-      '/images/projects/kamila_icms/kamila-icms-4.jpg',
-      '/images/projects/kamila_icms/kamila-icms-5.jpg',
-    ],
-    technologies: ['Flutter', 'Firebase'],
-    liveDemo: 'https://example.com/project-two',
-    github: 'https://github.com/username/project-two',
-  },
-  {
-    title: 'Vending Machine Software (Frontend)',
-    description: 'A vending machine application using Android and Java.',
-    images: [
-      '/images/projects/vending_machine/vending-machine-1.jpg',
-      '/images/projects/vending_machine/vending-machine-2.jpg',
-      '/images/projects/vending_machine/vending-machine-3.jpg',
-    ],
-    technologies: ['Android', 'Java'],
-    liveDemo: 'https://example.com/project-three',
-    github: 'https://github.com/username/project-three',
-  },
-  {
-    title: 'Hartanzah Coffee Roasting (Frontend)',
-    description: 'A mobile application to help Coffee Shop Owner and Barista manage and roaster coffee beans.',
-    images: [
-      '/images/projects/coffee_roasting/coffee-roasting-1.jpg',
-      '/images/projects/coffee_roasting/coffee-roasting-2.jpg',
-      '/images/projects/coffee_roasting/coffee-roasting-3.jpg',
-      '/images/projects/coffee_roasting/coffee-roasting-4.jpg',
-    ],
-    technologies: ['MIT App Inventor'],
-    liveDemo: 'https://example.com/project-three',
-    github: 'https://github.com/username/project-three',
-  },
-  {
-    title: 'Heart Classification Website',
-    description: 'A web application to classify Cardiomegaly and Coroner heart disease.',
-    images: [
-      '/images/projects/heart_classification/heart-classification-1.jpg',
-      '/images/projects/heart_classification/heart-classification-2.jpg',
-      '/images/projects/heart_classification/heart-classification-3.jpg',
-      '/images/projects/heart_classification/heart-classification-4.jpg',
-      '/images/projects/heart_classification/heart-classification-5.jpg',
-    ],
-    technologies: ['Python', 'TensorFlow'],
-    liveDemo: 'https://example.com/project-three',
-    github: 'https://github.com/username/project-three',
-  },
-];
+import { projects } from '../constants/projects';
 
 export default function ProjectsPage() {
   return (
