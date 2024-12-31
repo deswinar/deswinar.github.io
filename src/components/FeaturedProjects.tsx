@@ -30,6 +30,20 @@ export default function FeaturedProjects() {
               modules={[Zoom, Autoplay, Navigation, Pagination]}
               className="rounded-t-lg"
             >
+              {/* YouTube Video */}
+              {project.youtubeLink && (
+                <SwiperSlide>
+                  <div className="relative w-full h-48 bg-black">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${project.youtubeLink}`}
+                      title={`${project.title} Video`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </SwiperSlide>
+              )}
               {project.images.map((image, imgIndex) => (
                 <SwiperSlide key={imgIndex}>
                   <div className="swiper-zoom-container">
