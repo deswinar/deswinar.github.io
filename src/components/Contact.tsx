@@ -8,7 +8,7 @@ export default function Contact() {
         I&apos;d love to hear from you. Feel free to reach out via email!
       </p>
       <a
-        href="mailto:your-email@example.com"
+        href="mailto:deswinauliyaarabbani@gmail.com"
         className="px-8 py-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 transition transform hover:scale-105"
         aria-label="Send an Email"
       >

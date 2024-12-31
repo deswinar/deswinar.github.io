@@ -17,22 +17,13 @@ export default function SocialLinks() {
           <FaGithub />
         </a>
         <a
-          href="https://www.linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/deswinar/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
           className="text-4xl text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500 transition transform hover:scale-110"
         >
           <FaLinkedin />
-        </a>
-        <a
-          href="https://twitter.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
-          className="text-4xl text-gray-800 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-300 transition transform hover:scale-110"
-        >
-          <FaTwitter />
         </a>
       </div>
     </section>
