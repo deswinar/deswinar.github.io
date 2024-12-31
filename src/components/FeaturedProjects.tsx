@@ -52,6 +52,8 @@ export default function FeaturedProjects() {
                       src={image}
                       alt={`${project.title} - Image ${imgIndex + 1}`}
                       className="w-full h-48 object-contain"
+                      width={500}
+                      height={300}
                     />
                   </div>
                 </SwiperSlide>

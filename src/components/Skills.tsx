@@ -29,6 +29,8 @@ export default function Skills() {
               alt={`${skill.name} Icon`}
               aria-label={skill.name}
               className="h-16 mb-4 dark:filter dark:brightness-90"
+              width={64}
+              height={64}
             />
             <p className="text-lg font-medium text-gray-900 dark:text-gray-300">
               {skill.name}
