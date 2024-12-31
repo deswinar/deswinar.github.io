@@ -6,6 +6,7 @@ import 'swiper/css/zoom';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from 'next/link';
+import Image from 'next/image';
 import { projects } from "../app/constants/projects";
 
 export default function FeaturedProjects() {
@@ -47,7 +48,7 @@ export default function FeaturedProjects() {
               {project.images.map((image, imgIndex) => (
                 <SwiperSlide key={imgIndex}>
                   <div className="swiper-zoom-container">
-                    <img
+                    <Image
                       src={image}
                       alt={`${project.title} - Image ${imgIndex + 1}`}
                       className="w-full h-48 object-contain"

@@ -1,4 +1,5 @@
 'use client'; // This marks the component as a client component
+import Image from 'next/image';
 
 const skills = [
   { name: 'Python', icon: '/icons/python.svg' },
@@ -23,7 +24,7 @@ export default function Skills() {
             className="flex flex-col items-center transition-transform transform hover:scale-105"
           >
             {/* Single Icon for both themes */}
-            <img
+            <Image
               src={skill.icon}
               alt={`${skill.name} Icon`}
               aria-label={skill.name}
