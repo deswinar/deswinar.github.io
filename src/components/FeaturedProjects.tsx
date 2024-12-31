@@ -14,7 +14,7 @@ export default function FeaturedProjects() {
     <section id="projects" className="py-20 bg-gray-100 dark:bg-gray-900 text-center">
       <h2 className="text-3xl font-bold mb-10 text-gray-900 dark:text-white">Featured Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {featuredProjects .map((project, index) => (
+        {featuredProjects.map((project, index) => (
           <div
             key={index}
             className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow"
@@ -65,18 +65,22 @@ export default function FeaturedProjects() {
 
               {/* Buttons */}
               <div className="flex justify-center space-x-4">
-                <Link
-                  href={project.liveDemo}
-                  className="px-4 py-2 bg-blue-500 dark:bg-blue-600 text-white rounded-lg shadow hover:bg-blue-600 dark:hover:bg-blue-700"
-                >
-                  Live Demo
-                </Link>
-                <Link
-                  href={project.github}
-                  className="px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg shadow hover:bg-gray-900 dark:hover:bg-gray-800"
-                >
-                  View Code
-                </Link>
+                {project.liveDemo && (
+                  <Link
+                    href={project.liveDemo}
+                    className="px-4 py-2 bg-blue-500 dark:bg-blue-600 text-white rounded-lg shadow hover:bg-blue-600 dark:hover:bg-blue-700"
+                  >
+                    Live Demo
+                  </Link>
+                )}
+                {project.github && (
+                  <Link
+                    href={project.github}
+                    className="px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg shadow hover:bg-gray-900 dark:hover:bg-gray-800"
+                  >
+                    View Code
+                  </Link>
+                )}
               </div>
             </div>
           </div>

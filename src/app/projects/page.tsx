@@ -27,10 +27,24 @@ export default function ProjectsPage() {
               loop={true}
               zoom={{ maxRatio: 2 }}
               pagination={{ type: 'bullets', clickable: true }}
-              autoplay={{ delay: 5000 }}
+              // autoplay={{ delay: 5000 }}
               modules={[Zoom, Autoplay, Navigation, Pagination]}
               className="rounded-t-lg"
             >
+              {/* YouTube Video */}
+              {project.youtubeLink && (
+                <SwiperSlide>
+                  <div className="relative w-full h-48 bg-black">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${project.youtubeLink}`}
+                      title={`${project.title} Video`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </SwiperSlide>
+              )}
               {project.images.map((image, imgIndex) => (
                 <SwiperSlide key={imgIndex}>
                   <div className="swiper-zoom-container">
@@ -64,18 +78,22 @@ export default function ProjectsPage() {
               </ul>
 
               <div className="flex justify-center space-x-4">
-                <Link
-                  href={project.liveDemo}
-                  className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 transition-colors"
-                >
-                  Live Demo
-                </Link>
-                <Link
-                  href={project.github}
-                  className="px-4 py-2 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
-                >
-                  View Code
-                </Link>
+                {project.liveDemo && (
+                    <Link
+                      href={project.liveDemo}
+                      className="px-4 py-2 bg-blue-500 dark:bg-blue-600 text-white rounded-lg shadow hover:bg-blue-600 dark:hover:bg-blue-700"
+                    >
+                      Live Demo
+                    </Link>
+                  )}
+                  {project.github && (
+                    <Link
+                      href={project.github}
+                      className="px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg shadow hover:bg-gray-900 dark:hover:bg-gray-800"
+                    >
+                      View Code
+                    </Link>
+                  )}
               </div>
             </div>
           </div>
