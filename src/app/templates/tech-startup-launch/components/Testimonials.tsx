@@ -10,7 +10,6 @@ import testimonial2 from "../assets/images/testimonial2.jpg";
 import testimonial3 from "../assets/images/testimonial3.jpg";
 import testimonial4 from "../assets/images/testimonial4.jpg";
 import testimonial5 from "../assets/images/testimonial5.jpg";
-import testimonial6 from "../assets/images/testimonial6.jpg";
 
 interface Testimonial {
   id: number;
