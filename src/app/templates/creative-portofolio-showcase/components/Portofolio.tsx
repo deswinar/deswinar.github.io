@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 // Import Images Directly
 import portfolio1 from "../assets/images/portofolio1.png";
