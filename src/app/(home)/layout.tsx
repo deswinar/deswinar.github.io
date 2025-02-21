@@ -1,7 +1,7 @@
-import '../styles/globals.css';
+import '../../styles/globals.css';
 import { ReactNode } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 export const metadata = {
   title: 'My Portfolio',
@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" className="dark">
       <body className="min-h-screen flex flex-col bg-background text-foreground">
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow pt-16">{children}</main>
         <Footer />
       </body>
     </html>

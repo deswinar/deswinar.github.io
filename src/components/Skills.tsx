@@ -13,7 +13,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="py-20 bg-gradient-to-r from-gray-100 to-gray-300 dark:from-gray-800 dark:to-gray-700 text-center">
+    <section id="skills" className="py-20 bg-gradient-to-r from-gray-100 to-gray-300 dark:from-gray-800 dark:to-gray-700 text-center">
       <h2 className="text-3xl font-bold mb-10 text-gray-900 dark:text-white">
         Skills
       </h2>

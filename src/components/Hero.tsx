@@ -1,53 +1,94 @@
-// components/Hero.jsx
-'use client';
-import Typewriter from 'typewriter-effect';
-import { useEffect, useState } from 'react';
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import Typewriter from "typewriter-effect";
 
 export default function Hero() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true); // Triggered only on the client side
+    setIsClient(true);
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center text-center py-20">
-      <h1 className="text-5xl font-extrabold mb-6" style={{ color: 'var(--foreground)' }}>
-        Welcome to <span className="text-blue-500">Deswin&apos;s Digital Space</span>
-      </h1>
-      <p className="text-xl mb-6 max-w-2xl" style={{ color: 'var(--secondary-foreground)' }}>
-        Hi, I&apos;m <span className="font-bold text-blue-500">Deswin</span>, a developer driven by a passion for creating impactful digital experiences.
-        Whether it&apos;s crafting innovative applications or solving complex challenges, my goal is to bring ideas to life through code.
-      </p>
+    <motion.section
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 md:px-12"
+    >
+      {/* ✅ Background Image with Overlay */}
+      <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[url('/images/hero-bg.jpg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-40"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
-      <div className="text-lg mb-6 max-w-2xl" style={{ color: 'var(--secondary-foreground)' }}>
-        I specialize in{' '}
-        <span className="text-blue-500">
-          {isClient && (
-            <Typewriter
-              options={{
-                strings: ['Web Development', 'Mobile Apps', 'AI Solutions'],
-                autoStart: true,
-                loop: true,
-                delay: 50,
-                deleteSpeed: 30, // Optional: Makes the deleting effect look smoother
-              }}
-            />
-          )}
-        </span>
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8">
+        {/* Text Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="max-w-xl text-center md:text-left"
+        >
+          {/* ✅ Title with Hover Animation */}
+          <motion.h1
+            whileHover={{ scale: 1.1, color: "#facc15" }} // Yellow on hover
+            transition={{ type: "spring", stiffness: 200 }}
+            className="text-4xl md:text-5xl font-extrabold mb-4 text-white leading-tight cursor-pointer"
+          >
+            Elevate Your Digital Presence
+          </motion.h1>
+
+          <p className="text-lg md:text-xl mb-4 text-white opacity-80">
+            Access a curated collection of modern landing page templates—designed for digital success.
+          </p>
+
+          {/* ✅ Typewriter Effect */}
+          <div className="text-lg md:text-xl mb-6 text-white">
+            Powering your projects with{" "}
+            <span className="font-bold">
+              {isClient && (
+                <Typewriter
+                  options={{
+                    strings: ["Beautiful UI", "Seamless UX", "Cutting-Edge Design"],
+                    autoStart: true,
+                    loop: true,
+                    delay: 50,
+                    deleteSpeed: 30,
+                  }}
+                />
+              )}
+            </span>
+          </div>
+
+          {/* CTA Button */}
+          <motion.a
+            href="/templates"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block px-8 py-3 bg-blue-500 text-white font-medium text-lg rounded-lg shadow-lg
+                      hover:bg-blue-600 transition-all duration-300"
+          >
+            Browse Templates
+          </motion.a>
+        </motion.div>
+
+        {/* ✅ Profile Image with Hover Animation */}
+        <motion.div
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          whileHover={{ scale: 1.1, rotate: 5 }} // Slight scale & rotation
+          transition={{ duration: 0.4 }}
+          className="relative w-72 h-72 md:w-96 md:h-96 rounded-lg overflow-hidden shadow-lg cursor-pointer"
+        >
+          <Image
+            src="/images/profile-image.png" // ✅ Uses image from public folder
+            alt="Template Preview"
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </motion.div>
       </div>
-
-      <p className="text-lg mb-4 max-w-xl" style={{ color: 'var(--secondary-foreground)' }}>
-        Take a journey through my portfolio to explore projects that merge creativity and technology, discover the skills that fuel my craft,
-        and connect with me to collaborate on something extraordinary.
-      </p>
-      <a
-        href="/projects"
-        className="cta-button mt-6 px-8 py-3 bg-blue-500 text-white font-medium text-lg rounded-lg shadow
-          hover:bg-blue-600 hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out"
-      >
-        Explore My Work
-      </a>
-    </section>
+    </motion.section>
   );
 }

@@ -5,6 +5,7 @@ export const projects = [
     description: 'Developed school management app and admin web for ICMS Boarding School using Flutter and Firebase. Includes attendance system for teachers and students, scoring, class schedule, daily and monthly reports and Parents monitoring. Authentication using Firebase Auth and database using Firestore.',
     youtubeLink: '',
     images: [
+      '/images/projects/kamila_icms/thumbnail.png',
       '/images/projects/kamila_icms/kamila-icms-1.jpg',
       '/images/projects/kamila_icms/kamila-icms-2.jpg',
       '/images/projects/kamila_icms/kamila-icms-3.jpg',
@@ -20,6 +21,7 @@ export const projects = [
     description: 'Developed Computer Based Test website using Flutter and Firebase for ICMS Boarding School.',
     youtubeLink: '',
     images: [
+      '/images/projects/icms_cbt/thumbnail.png',
       '/images/projects/icms_cbt/cbt-1.jpg',
       '/images/projects/icms_cbt/cbt-2.jpg',
       '/images/projects/icms_cbt/cbt-3.jpg',
@@ -36,6 +38,7 @@ export const projects = [
     description: 'Developed food recipe sharing app using Flutter and Firebase. Authentication using Firebase Auth and database using Firestore. Using Bloc state management and implementing clean architecture as needed.',
     youtubeLink: '',
     images: [
+      '/images/projects/foodies/thumbnail.png',
       '/images/projects/foodies/foodies-1.jpg',
       '/images/projects/foodies/foodies-2.jpg',
       '/images/projects/foodies/foodies-3.jpg',
@@ -56,6 +59,7 @@ export const projects = [
     description: 'Developed Desktop and Raspberry Pi application for name signature recognition using Python, PyTorch and LSTM Neural Network model.',
     youtubeLink: '',
     images: [
+      '/images/projects/handsign_recognition/thumbnail.png',
       '/images/projects/handsign_recognition/handsign-recognition-1.JPG',
       '/images/projects/handsign_recognition/handsign-recognition-2.JPG',
       '/images/projects/handsign_recognition/handsign-recognition-3.JPG',
@@ -71,6 +75,7 @@ export const projects = [
     description: 'Developed the frontend of a snack vending machine using android OS hardware with native android. Includes polishing the TCP communication to the electrical hardware and payment method using digital e-wallet and cash.',
     youtubeLink: '3ZzksLliGzI',
     images: [
+      '/images/projects/vending_machine/thumbnail.png',
       '/images/projects/vending_machine/vending-machine-1.jpg',
       '/images/projects/vending_machine/vending-machine-2.jpg',
       '/images/projects/vending_machine/vending-machine-3.jpg',
@@ -80,24 +85,11 @@ export const projects = [
     github: '',
   },
   {
-    title: 'Realtime Drowsiness Detection',
-    description: 'Developed Android app using Kotlin for realtime drowsiness detection to help driver alerted if they are getting drowsy. Using YOLOV5 and TFLite.',
-    youtubeLink: '',
-    images: [
-      '/images/projects/drowsy/drowsy-1.jpg',
-      '/images/projects/drowsy/drowsy-2.jpg',
-      '/images/projects/drowsy/drowsy-3.jpg',
-      '/images/projects/drowsy/drowsy-4.jpg',
-    ],
-    technologies: ['Kotlin', 'YOLOV5', 'TFLite'],
-    liveDemo: '',
-    github: 'https://github.com/deswinar/Realtime-Drowsiness-Detection',
-  },
-  {
     title: 'Hartanzah Coffee Roasting (Frontend)',
     description: 'A mobile application to help Coffee Shop Owner and Barista manage and roaster coffee beans.',
     youtubeLink: '',
     images: [
+      '/images/projects/coffee_roasting/thumbnail.png',
       '/images/projects/coffee_roasting/coffee-roasting-1.jpg',
       '/images/projects/coffee_roasting/coffee-roasting-2.jpg',
       '/images/projects/coffee_roasting/coffee-roasting-3.jpg',
@@ -108,10 +100,41 @@ export const projects = [
     github: '',
   },
   {
+    title: 'E-Absensi',
+    description: 'Developed Android app using Flutter for Attendance system with Location and Selfie photo with Laravel as backend, and MySQL as Database',
+    youtubeLink: '',
+    images: [
+      '/images/projects/e_absensi/thumbnail.png',
+      '/images/projects/e_absensi/e-absensi-1.jpg',
+      '/images/projects/e_absensi/e-absensi-2.jpg',
+      '/images/projects/e_absensi/e-absensi-3.jpg',
+      '/images/projects/e_absensi/e-absensi-4.jpg',
+    ],
+    technologies: ['Flutter', 'Laravel', 'MySQL'],
+    liveDemo: '',
+    github: 'https://github.com/deswinar/Realtime-Drowsiness-Detection',
+  },  
+  {
+    title: 'Realtime Drowsiness Detection',
+    description: 'Developed Android app using Kotlin for realtime drowsiness detection to help driver alerted if they are getting drowsy. Using YOLOV5 and TFLite.',
+    youtubeLink: '',
+    images: [
+      '/images/projects/drowsy/thumbnail.png',
+      '/images/projects/drowsy/drowsy-1.jpg',
+      '/images/projects/drowsy/drowsy-2.jpg',
+      '/images/projects/drowsy/drowsy-3.jpg',
+      '/images/projects/drowsy/drowsy-4.jpg',
+    ],
+    technologies: ['Kotlin', 'YOLOV5', 'TFLite'],
+    liveDemo: '',
+    github: 'https://github.com/deswinar/Realtime-Drowsiness-Detection',
+  },  
+  {
     title: 'Heart Disease Classification Website',
     description: 'A web application to classify Cardiomegaly and Coroner heart disease.',
     youtubeLink: '',
     images: [
+      '/images/projects/heart_classification/thumbnail.png',
       '/images/projects/heart_classification/heart-classification-1.jpg',
       '/images/projects/heart_classification/heart-classification-2.jpg',
       '/images/projects/heart_classification/heart-classification-3.jpg',
