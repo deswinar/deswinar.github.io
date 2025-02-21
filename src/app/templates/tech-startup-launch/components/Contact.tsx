@@ -19,7 +19,7 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-4xl font-bold"
         >
-          Let's Connect
+          Let&apos;s Connect
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

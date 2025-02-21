@@ -19,7 +19,7 @@ export default function About() {
             About Me
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            I'm a passionate <span className="font-semibold text-blue-500">UI/UX Designer</span> &  
+            I&apos;m a passionate <span className="font-semibold text-blue-500">UI/UX Designer</span> &  
             <span className="font-semibold text-blue-500"> Frontend Developer</span> dedicated to  
             crafting beautiful and user-friendly digital experiences. I love  
             turning ideas into reality through design and code.

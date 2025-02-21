@@ -14,7 +14,7 @@ interface Project {
   id: number;
   title: string;
   description: string;
-  image: any;
+  image: StaticImageData;
   category: string;
   link: string;
 }

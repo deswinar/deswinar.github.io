@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     role: "CTO, Beta Inc",
     quote:
       "The seamless integration and robust infrastructure exceeded our expectations.",
-    image: testimonial1,
+    image: testimonial2,
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const testimonials: Testimonial[] = [
     role: "Founder, Gamma Startups",
     quote:
       "A truly innovative approach that has taken our business to the next level.",
-    image: testimonial1,
+    image: testimonial3,
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const testimonials: Testimonial[] = [
     role: "VP, Delta Solutions",
     quote:
       "An outstanding service that allowed us to scale our operations effortlessly.",
-    image: testimonial1,
+    image: testimonial4,
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const testimonials: Testimonial[] = [
     role: "COO, Zeta Enterprises",
     quote:
       "Highly recommended for any business looking to modernize their tech stack.",
-    image: testimonial1,
+    image: testimonial5,
   },
 ];
 
