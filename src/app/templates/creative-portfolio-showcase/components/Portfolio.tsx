@@ -85,12 +85,11 @@ export default function Portfolio() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-lg text-center text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto"
         >
-          A collection of my best creative works. Click on a project to explore
-          more.
+          A collection of my best creative works. Click on a project to explore more.
         </motion.p>
 
         {/* Category Filters */}
-        <div className="flex justify-center mt-8 space-x-4">
+        <div className="flex justify-center flex-wrap mt-8 gap-4">
           {categories.map((category) => (
             <button
               key={category}

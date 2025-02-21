@@ -6,7 +6,7 @@ export default function CallToAction() {
         Have an exciting project in mind? I&apos;m always open to new opportunities and collaborations. Let&apos;s build something great together!
       </p>
       <a
-        href="mailto:deswinauliyaarabbani@gmail.com"
+        href="#contact"
         className="inline-block px-8 py-3 bg-white text-blue-500 rounded-lg shadow-lg hover:bg-gray-100 dark:hover:bg-gray-200 dark:text-blue-700 transition focus:outline-none focus:ring-4 focus:ring-blue-300"
       >
         Get in Touch

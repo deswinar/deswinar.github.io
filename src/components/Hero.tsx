@@ -82,7 +82,7 @@ export default function Hero() {
           className="relative w-72 h-72 md:w-96 md:h-96 rounded-lg overflow-hidden shadow-lg cursor-pointer"
         >
           <Image
-            src="/images/profile-image.png" // ✅ Uses image from public folder
+            src="/images/hero-image.png" // ✅ Uses image from public folder
             alt="Template Preview"
             fill
             style={{ objectFit: "cover" }}

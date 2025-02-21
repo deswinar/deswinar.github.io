@@ -8,7 +8,10 @@ const skills = [
   { name: 'TypeScript', icon: '/icons/typescript.svg' },
   { name: 'TailwindCSS', icon: '/icons/tailwindcss.svg' },
   { name: 'Flutter', icon: '/icons/flutter.svg' },
-  { name: 'Android Java', icon: '/icons/java.svg' },
+  { name: 'Android Studio (Java & Kotlin)', icon: '/icons/android-studio.svg' },
+  { name: 'Firebase', icon: '/icons/firebase.svg' },
+  { name: 'Supabase', icon: '/icons/supabase.svg' },
+  { name: 'PostgreSQL', icon: '/icons/postgresql.svg' },
 ];
 
 export default function Skills() {

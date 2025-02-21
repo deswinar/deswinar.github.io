@@ -15,11 +15,11 @@ const templates = [
   },
   {
     id: 2,
-    title: "Creative Portofolio Showcase",
+    title: "Creative Portfolio Showcase",
     description: "Showcasing Creativity, One Pixel at a Time.",
     image: "/images/templates/templates-2-screenshot-1.png",
     price: "$1.99",
-    previewUrl: "/templates/creative-portofolio-showcase",
+    previewUrl: "/templates/creative-portfolio-showcase",
   },
 ];
 

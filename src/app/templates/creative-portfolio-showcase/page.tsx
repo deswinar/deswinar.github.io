@@ -1,9 +1,10 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Educations from "./components/Educations";
 import Experiences from "./components/Experiences";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
-import Portfolio from "./components/Portofolio";
+import Portfolio from "./components/Portfolio";
 
 
 export default function CreativePortfolioShowcasePage() {
@@ -17,6 +18,9 @@ export default function CreativePortfolioShowcasePage() {
 
       {/* Experiences Section */}
       <Experiences />
+
+      {/* Educations Section */}
+      <Educations />
       
       {/* About Section */}
       <About />

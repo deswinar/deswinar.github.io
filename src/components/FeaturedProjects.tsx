@@ -1,9 +1,15 @@
 'use client';
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/zoom';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "../app/(home)/constants/projects";
-import { AnimatePresence, motion } from "framer-motion";
+import { Autoplay, Navigation, Pagination, Zoom } from 'swiper/modules';
 
 export default function FeaturedProjects() {
   type ProjectType = {
@@ -86,7 +92,7 @@ export default function FeaturedProjects() {
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
-              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-3xl w-full relative"
+              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg max-w-3xl w-full relative overflow-y-auto max-h-[80vh]" // Added max-height and overflow-y-auto
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -105,19 +111,30 @@ export default function FeaturedProjects() {
                 {selectedProject.title}
               </h3>
 
-              {/* Multiple Images in Modal */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Carousel for Images */}
+              <Swiper
+                spaceBetween={10}
+                slidesPerView={1}
+                loop={true}
+                zoom={{ maxRatio: 2 }}
+                pagination={{ type: 'bullets', clickable: true }}
+                modules={[Zoom, Autoplay, Navigation, Pagination]}
+                className="rounded-t-lg"
+              >
                 {selectedProject.images.map((image, imgIndex) => (
-                  <Image
-                    key={imgIndex}
-                    src={image}
-                    alt={`${selectedProject.title} - Image ${imgIndex + 1}`}
-                    className="w-full h-auto object-cover rounded-lg"
-                    width={400} // 4:3 aspect ratio
-                    height={300}
-                  />
+                  <SwiperSlide key={imgIndex}>
+                    <div className="swiper-zoom-container">
+                      <Image
+                        src={image}
+                        alt={`${selectedProject.title} - Image ${imgIndex + 1}`}
+                        className="w-full h-80 object-contain"
+                        width={500}
+                        height={300}
+                      />
+                    </div>
+                  </SwiperSlide>
                 ))}
-              </div>
+              </Swiper>
 
               {/* Description */}
               <p className="mt-4 text-gray-700 dark:text-gray-300">
