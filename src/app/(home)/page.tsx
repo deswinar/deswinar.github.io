@@ -16,8 +16,8 @@ export default function HomePage() {
       <Skills />
       <CallToAction />
       <AboutMe />
-      <SocialLinks />
       <Contact />
+      <SocialLinks />
     </div>
   );
 }

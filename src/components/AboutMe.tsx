@@ -9,7 +9,7 @@ const experiences = [
     id: 1,
     title: 'Freelance Software Developer',
     company: 'Freelance',
-    duration: 'August 2023 - Present',
+    duration: 'August 2020 - Present',
     description: 'Developed Flutter and Android apps with a focus on user-friendly designs. Built Next.js web applications with performance optimization and AI integration. Integrated Firebase and Supabase for backend services, and used Python for machine learning projects.',
   },
   {
