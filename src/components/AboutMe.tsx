@@ -10,6 +10,7 @@ const experiences = [
     title: 'Freelance Software Developer',
     company: 'Freelance',
     duration: 'August 2020 - Present',
+    location: 'Jakarta, Indonesia',
     description: 'Developed Flutter and Android apps with a focus on user-friendly designs. Built Next.js web applications with performance optimization and AI integration. Integrated Firebase and Supabase for backend services, and used Python for machine learning projects.',
   },
   {
@@ -17,6 +18,7 @@ const experiences = [
     title: 'Website and Mobile Developer',
     company: 'Jakarta Bike Hub',
     duration: 'October 2019 - March 2020',
+    location: 'Jakarta, Indonesia',
     description: 'Developed an Android app for e-bike rentals with Xendit payment gateway and Google Maps API integration. Built IoT communication services using Node.js and TCP. Designed a responsive landing page website to enhance user engagement.',
   },
   {
@@ -24,6 +26,7 @@ const experiences = [
     title: 'Website Developer',
     company: 'PT. Maxxima Innovative Engineering',
     duration: 'October 2018 - October 2019',
+    location: 'Jakarta, Indonesia',
     description: 'Developed dynamic web applications using Laravel and CodeIgniter. Performed maintenance and bug fixing for existing applications. Collaborated with teams to deliver custom web solutions that enhanced client workflows.',
   },
 ];
@@ -31,11 +34,31 @@ const experiences = [
 const education = [
   {
     id: 1,
+    degree: 'Bootcamp Mobile Apps Development',
+    institution: 'Dibimbing.id',
+    duration: 'May 2025 – Present',
+    location: 'Jakarta, Indonesia',
+    description: `Learned Dart basics, OOP, package management, state management, responsive and custom widgets, routing, Git, API consumption, Firebase Auth, and Firestore.`,
+    skills: ['Dart', 'Flutter', 'Git', 'Firebase'],
+  },
+  {
+    id: 2,
+    degree: 'Flutter Mobile Apps Development',
+    institution: 'Sanbercode',
+    duration: 'Feb 2025 – Mar 2025',
+    location: 'Jakarta, Indonesia',
+    description: `Learned Dart, Git, OOP, GetX, REST API, Figma slicing, Firebase Auth, and more. Final project was a CBT quiz app — featured by Sanbercode. Graduated as Top 1 student of the batch.`,
+    skills: ['Dart', 'Flutter', 'Git', 'Firebase', 'GetX', 'Figma'],
+  },
+  {
+    id: 3,
     degree: 'Associate Degree',
     major: 'Industrial Electrical Engineering',
     institution: 'Politeknik Negeri Jakarta',
     duration: '2015 - 2018',
     gpa: '3.42',
+    location: 'Jakarta, Indonesia',
+    description: 'Final project: Developed a prototype of a Rupiah banknote denomination exchange machine using Python and Raspberry Pi 3.',
   },
 ];
 
@@ -128,6 +151,7 @@ export default function AboutMe() {
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">{exp.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300 font-medium">{exp.company} | {exp.duration}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{exp.location}</p>
                   <p className="text-gray-600 dark:text-gray-400 mt-2">{exp.description}</p>
                 </div>
               </motion.div>
@@ -159,9 +183,38 @@ export default function AboutMe() {
 
                 {/* Content */}
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">{edu.degree} in {edu.major}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 font-medium">{edu.institution} | {edu.duration}</p>
-                  <p className="text-gray-600 dark:text-gray-400 mt-2">GPA: {edu.gpa}</p>
+                  <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100">
+                    {edu.degree}
+                    {edu.major && ` in ${edu.major}`}
+                  </h3>
+
+                  <p className="text-gray-600 dark:text-gray-300 font-medium">
+                    {edu.institution} | {edu.duration}
+                  </p>
+
+                  {edu.location && (
+                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
+                      {edu.location}
+                    </p>
+                  )}
+
+                  {edu.gpa && (
+                    <p className="text-gray-600 dark:text-gray-400 mt-2">
+                      GPA: {edu.gpa}
+                    </p>
+                  )}
+
+                  {edu.description && (
+                    <p className="text-gray-600 dark:text-gray-400 mt-2">
+                      {edu.description}
+                    </p>
+                  )}
+
+                  {edu.skills && (
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                      <span className="font-semibold">Technical Skills:</span> {edu.skills.join(', ')}
+                    </p>
+                  )}
                 </div>
               </motion.div>
             ))}
