@@ -36,7 +36,7 @@ export default function Hero() {
             transition={{ type: "spring", stiffness: 200 }}
             className="text-4xl md:text-5xl font-extrabold mb-4 text-white leading-tight cursor-pointer"
           >
-            Hi, I'm Deswin, a Software Developer
+            Hi, I&apos;m Deswin, a Software Developer
           </motion.h1>
 
           <p className="text-lg md:text-xl mb-4 text-white opacity-80">
