@@ -31,7 +31,7 @@ const experiences = [
 const education = [
   {
     id: 1,
-    degree: 'Diploma 3',
+    degree: 'Associate Degree',
     major: 'Industrial Electrical Engineering',
     institution: 'Politeknik Negeri Jakarta',
     duration: '2015 - 2018',

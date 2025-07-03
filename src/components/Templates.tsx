@@ -92,7 +92,7 @@ export default function Templates() {
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.3 }}
             className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-3/4 max-w-lg relative"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
@@ -112,13 +112,13 @@ export default function Templates() {
             />
 
             {/* Template Details */}
-            <h3 className="text-2xl font-semibold mt-4">{selectedTemplate.title}</h3>
+            <h3 className="text-2xl font-semibold mt-4 text-gray-800 dark:text-white">
+              {selectedTemplate.title}
+            </h3>
             <p className="text-gray-600 dark:text-gray-300 mt-2">{selectedTemplate.description}</p>
 
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-xl font-bold text-gray-800 dark:text-white">
-                {selectedTemplate.price}
-              </span>
+            {/* View Template Button */}
+            <div className="mt-6 flex justify-end">
               <a
                 href={selectedTemplate.previewUrl}
                 target="_blank"
@@ -128,13 +128,6 @@ export default function Templates() {
                 View Template
               </a>
             </div>
-
-            {/* Buy Now Button Moved Inside Popup */}
-            <button
-              className="mt-6 w-full px-4 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all duration-300"
-            >
-              {selectedTemplate.price === "$0.00" ? "Download" : "Buy Now"}
-            </button>
           </motion.div>
         </div>
       )}

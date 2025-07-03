@@ -134,7 +134,7 @@ export const projects = [
     description: 'A web application to classify Cardiomegaly and Coroner heart disease.',
     youtubeLink: '',
     images: [
-      '/images/projects/heart_classification/thumbnail.png',
+      '/images/projects/heart_classification/heart-classification-1.jpg',
       '/images/projects/heart_classification/heart-classification-1.jpg',
       '/images/projects/heart_classification/heart-classification-2.jpg',
       '/images/projects/heart_classification/heart-classification-3.jpg',

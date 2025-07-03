@@ -18,7 +18,7 @@ export default function Hero() {
       transition={{ duration: 0.8 }}
       className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 md:px-12"
     >
-      {/* ✅ Background Image with Overlay */}
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[url('/images/hero-bg.jpg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-40"></div>
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
@@ -30,27 +30,26 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="max-w-xl text-center md:text-left"
         >
-          {/* ✅ Title with Hover Animation */}
+          {/* Title with Hover Animation */}
           <motion.h1
             whileHover={{ scale: 1.1, color: "#facc15" }} // Yellow on hover
             transition={{ type: "spring", stiffness: 200 }}
             className="text-4xl md:text-5xl font-extrabold mb-4 text-white leading-tight cursor-pointer"
           >
-            Elevate Your Digital Presence
+            Hi, I'm Deswin, a Software Developer
           </motion.h1>
 
           <p className="text-lg md:text-xl mb-4 text-white opacity-80">
-            Access a curated collection of modern landing page templates—designed for digital success.
+            I specialize in building modern mobile and web applications that are fast, responsive, and user-friendly.
           </p>
 
-          {/* ✅ Typewriter Effect */}
           <div className="text-lg md:text-xl mb-6 text-white">
-            Powering your projects with{" "}
+            I bring{" "}
             <span className="font-bold">
               {isClient && (
                 <Typewriter
                   options={{
-                    strings: ["Beautiful UI", "Seamless UX", "Cutting-Edge Design"],
+                    strings: ["Frontend Excellence", "Clean Code", "Scalable Architecture"],
                     autoStart: true,
                     loop: true,
                     delay: 50,
@@ -59,21 +58,21 @@ export default function Hero() {
                 />
               )}
             </span>
+            {" "}to every project I work on.
           </div>
 
-          {/* CTA Button */}
           <motion.a
-            href="/templates"
+            href="/#projects"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block px-8 py-3 bg-blue-500 text-white font-medium text-lg rounded-lg shadow-lg
                       hover:bg-blue-600 transition-all duration-300"
           >
-            Browse Templates
+            View My Work
           </motion.a>
         </motion.div>
 
-        {/* ✅ Profile Image with Hover Animation */}
+        {/* Profile Image with Hover Animation */}
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
