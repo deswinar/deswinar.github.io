@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div>
       <Hero />
-      <Templates />
+      {/* <Templates /> */}
       <FeaturedProjects />
       <Skills />
       <CallToAction />
