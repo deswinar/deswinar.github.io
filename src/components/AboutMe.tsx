@@ -7,6 +7,14 @@ import Image from 'next/image';
 const experiences = [
   {
     id: 1,
+    title: 'Fullstack Developer',
+    company: 'PT. Bersama Kreatif Teknologi',
+    duration: 'May 2025 - Present',
+    location: 'Jakarta, Indonesia',
+    description: 'Developed a Flutter-based property listing app, enabling users to explore and submit listings through property owners and share referral codes with other users.\nDesigned an optimization for backend cron job system by consolidating multiple task schedulers into a centralized cron runner, reducing redundant executions and lowering server resource usage by ~60%.',
+  },
+  {
+    id: 2,
     title: 'Freelance Software Developer',
     company: 'Freelance',
     duration: 'August 2020 - Present',
@@ -14,7 +22,7 @@ const experiences = [
     description: 'Developed Flutter and Android apps with a focus on user-friendly designs. Built Next.js web applications with performance optimization and AI integration. Integrated Firebase and Supabase for backend services, and used Python for machine learning projects.',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Website and Mobile Developer',
     company: 'Jakarta Bike Hub',
     duration: 'October 2019 - March 2020',
@@ -22,7 +30,7 @@ const experiences = [
     description: 'Developed an Android app for e-bike rentals with Xendit payment gateway and Google Maps API integration. Built IoT communication services using Node.js and TCP. Designed a responsive landing page website to enhance user engagement.',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Website Developer',
     company: 'PT. Maxxima Innovative Engineering',
     duration: 'October 2018 - October 2019',
