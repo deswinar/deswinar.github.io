@@ -33,7 +33,8 @@ export default function Contact() {
       } else {
         setStatus("❌ Failed to send message. Please try again.");
       }
-    } catch (_) {
+    } catch (err) {
+      console.error("Contact form error:", err);
       setStatus("❌ Something went wrong.");
     } finally {
       setLoading(false);
