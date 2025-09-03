@@ -6,39 +6,63 @@ import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter, FaInstagram } fro
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState("");
+  // const [status, setStatus] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   setStatus("");
+
+  //   const form = e.currentTarget;
+  //   const formData = {
+  //     name: (form.elements.namedItem("name") as HTMLInputElement).value,
+  //     email: (form.elements.namedItem("email") as HTMLInputElement).value,
+  //     message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+  //   };
+
+  //   try {
+  //     const res = await fetch("/api/contact", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(formData),
+  //     });
+
+  //     if (res.ok) {
+  //       setStatus("✅ Message sent successfully!");
+  //       form.reset();
+  //     } else {
+  //       setStatus("❌ Failed to send message. Please try again.");
+  //     }
+  //   } catch (err) {
+  //     console.error("Contact form error:", err);
+  //     setStatus("❌ Something went wrong.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setStatus("");
 
     const form = e.currentTarget;
-    const formData = {
-      name: (form.elements.namedItem("name") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
-    };
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    // Build WhatsApp message
+    const text = encodeURIComponent(
+      `Hello! \n\nMy name is ${name} (${email}).\n\n${message}`
+    );
 
-      if (res.ok) {
-        setStatus("✅ Message sent successfully!");
-        form.reset();
-      } else {
-        setStatus("❌ Failed to send message. Please try again.");
-      }
-    } catch (err) {
-      console.error("Contact form error:", err);
-      setStatus("❌ Something went wrong.");
-    } finally {
-      setLoading(false);
-    }
+    // Replace with your number
+    const phone = "6281319840203";
+
+    // Redirect to WhatsApp
+    window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+    
+    form.reset();
+    setLoading(false);
   };
 
   return (
@@ -151,11 +175,11 @@ export default function Contact() {
               {loading ? "Sending..." : "Send Message"}
             </button>
 
-            {status && (
+            {/* {status && (
               <p className="mt-4 text-center text-sm text-gray-700 dark:text-gray-300">
                 {status}
               </p>
-            )}
+            )} */}
           </motion.form>
         </div>
       </div>
